@@ -17,14 +17,14 @@
   .box{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px}
   .box h2{margin:0 0 10px;font-size:16px} .box ul{margin:0;padding-left:18px;color:#d8d8d8;line-height:1.7;font-size:14px}
   .box li b{color:#fff} .dos{color:#b9f5c8} .donts{color:#ffb3c0}
-  .prodgrid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  .prodgrid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
   @media(max-width:560px){.prodgrid{grid-template-columns:1fr}}
-  .prodcard{background:var(--card);border:1px solid var(--line);border-radius:16px;overflow:hidden}
-  .prodcard img{width:100%;aspect-ratio:1/1;object-fit:cover;display:block;background:#fff}
-  .prodcard .pmeta{padding:14px 16px}
-  .prodcard h3{margin:0 0 6px;font-size:16px;line-height:1.35}
-  .prodcard p{margin:0 0 12px;color:var(--muted);font-size:13.5px}
-  .prodcard a{display:block;text-align:center;background:var(--accent);color:#fff;text-decoration:none;padding:10px;border-radius:10px;font-weight:700;font-size:14px}
+  .prodcard{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:10px 12px;display:flex;gap:12px;align-items:center}
+  .prodcard img{width:64px;height:64px;border-radius:10px;object-fit:cover;background:#fff;flex:none}
+  .prodcard .pmeta{flex:1;min-width:0}
+  .prodcard h3{margin:0 0 3px;font-size:14.5px;line-height:1.3}
+  .prodcard p{margin:0;color:var(--muted);font-size:12.5px}
+  .prodcard a{flex:none;border:1px solid var(--line);color:#ddd;text-decoration:none;padding:8px 11px;border-radius:10px;font-weight:600;font-size:13px;white-space:nowrap}
   .filters{display:flex;flex-wrap:wrap;gap:8px;margin:22px 0 14px}
   .filters button{border:1px solid var(--line);background:#171717;color:#ddd;border-radius:999px;padding:8px 14px;cursor:pointer;font-size:14px}
   .filters button.active{background:var(--text);color:#111;border-color:var(--text);font-weight:700}
@@ -57,24 +57,24 @@
     <div><span class="pill">US Creators · Vertical · 30–60s</span></div>
   </header>
 
-  <section style="margin:22px 0 6px">
-    <h2 style="font-size:18px;margin:0 0 12px">Shop the products</h2>
+  <section style="margin:18px 0 2px">
+    <h2 style="font-size:16px;margin:0 0 10px">Shop the products</h2>
     <div class="prodgrid">
       <div class="prodcard">
         <img src="pt61-main.webp" alt="PT61 insulated lunch tote for women">
         <div class="pmeta">
           <h3>PT61 Insulated Lunch Tote — Women's</h3>
-          <p>$27.99 · 10.7K sold · ★ 4.8 (1.5K reviews) — our best seller</p>
-          <a href="https://shop.tiktok.com/us/pdp/hshrish-insulated-lunch-box-for-women-leak-proof-reusable/1732202213350740781" target="_blank" rel="noopener">View on TikTok Shop ↗</a>
+          <p>$27.99 · 10.7K sold · ★ 4.8 — our best seller</p>
         </div>
+        <a href="https://shop.tiktok.com/us/pdp/hshrish-insulated-lunch-box-for-women-leak-proof-reusable/1732202213350740781" target="_blank" rel="noopener">TikTok Shop ↗</a>
       </div>
       <div class="prodcard">
         <img src="lb04-camo.webp" alt="LB04 expandable lunch bag in black camo">
         <div class="pmeta">
           <h3>LB04 Expandable Lunch Bag — Black Camo</h3>
-          <p>$32.99 · 2.1K sold · ★ 4.7 (320 reviews)</p>
-          <a href="https://shop.tiktok.com/us/pdp/1732201998161646381" target="_blank" rel="noopener">View on TikTok Shop ↗</a>
+          <p>$32.99 · 2.1K sold · ★ 4.7</p>
         </div>
+        <a href="https://shop.tiktok.com/us/pdp/1732201998161646381" target="_blank" rel="noopener">TikTok Shop ↗</a>
       </div>
     </div>
   </section>
