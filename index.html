@@ -17,7 +17,8 @@
   .box{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px}
   .box h2{margin:0 0 10px;font-size:16px} .box ul{margin:0;padding-left:18px;color:#d8d8d8;line-height:1.7;font-size:14px}
   .box li b{color:#fff} .dos{color:#b9f5c8} .donts{color:#ffb3c0}
-  .prodgrid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+  .prodgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+  @media(max-width:900px){.prodgrid{grid-template-columns:1fr 1fr}}
   @media(max-width:560px){.prodgrid{grid-template-columns:1fr}}
   .prodcard{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:10px 12px;display:flex;gap:12px;align-items:center}
   .prodcard img{width:64px;height:64px;border-radius:10px;object-fit:cover;background:#fff;flex:none}
@@ -75,6 +76,14 @@
           <p>$32.99 · 2.1K sold · ★ 4.7</p>
         </div>
         <a href="https://shop.tiktok.com/us/pdp/1732201998161646381" target="_blank" rel="noopener">TikTok Shop ↗</a>
+      </div>
+      <div class="prodcard">
+        <img src="tb01-white.jpg" alt="TB01 suede tote bag in brown">
+        <div class="pmeta">
+          <h3>TB01 Suede Tote — Women's</h3>
+          <p>$41.98 · 1.9K sold · ★ 4.5 — new main push</p>
+        </div>
+        <a href="https://shop.tiktok.com/us/pdp/hshrish-women-shoulder-bag-trendy-crossbody-large-capacity-versatile/1732695275328279341" target="_blank" rel="noopener">TikTok Shop ↗</a>
       </div>
     </div>
   </section>
