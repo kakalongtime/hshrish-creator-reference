@@ -195,7 +195,7 @@ function playerHTML(v){
   if(!v.url) return `<div class="empty"><div class="big">🎬</div><p>Video coming soon<br><span style="font-size:12px">Paste a link in the VIDEOS list to fill this slot.</span></p></div>`;
   if(v.url.includes("tiktok.com")){ const id = tkId(v.url);
     return id
-      ? `<blockquote class="tiktok-embed" cite="${v.url}" data-video-id="${id}" style="max-width:605px;min-width:325px"><section></section></blockquote><span class="tiktok-note">TikTok · tap to play</span>`
+      ? `<iframe src="https://www.tiktok.com/player/v1/${id}?music_info=1&description=1" allowfullscreen allow="accelerometer; autoplay; clipboard-write; encrypted-media; fullscreen; gyroscope; picture-in-picture; web-share" loading="lazy" title="TikTok reference video"></iframe>`
       : `<div class="empty"><p>TikTok link — <a href="${v.url}" target="_blank" rel="noopener" style="color:#fff">open on TikTok ↗</a></p></div>`; }
   if(v.url.includes("youtube.com") || v.url.includes("youtu.be")){ const id = ytId(v.url);
     return id ? `<iframe src="https://www.youtube-nocookie.com/embed/${id}" allowfullscreen allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>` : `<div class="empty"><p><a href="${v.url}" target="_blank" rel="noopener" style="color:#fff">Watch on YouTube ↗</a></p></div>`; }
@@ -210,10 +210,8 @@ function render(){
   filtersEl.querySelectorAll('button').forEach(b=>b.onclick=()=>{active=b.dataset.c;render();});
   const list = VIDEOS.filter(v=>active==="All"||v.category===active);
   gridEl.innerHTML = list.map(v=>`<article class="card"><div class="player">${playerHTML(v)}</div><div class="meta"><span class="tag">${v.category}</span><h3>${v.title}</h3><p>${v.learn}</p><div class="label">Do ✅</div><ul><li>${v.do}</li></ul><div class="label">Don't ❌</div><ul><li>${v.dont}</li></ul><div class="actions">${v.url?`<a href="${v.url}" target="_blank" rel="noopener">Watch original ↗</a>`:`<a class="ghost" href="#">Awaiting link</a>`}</div></div></article>`).join("");
-  if(window.tiktokEmbed && window.tiktokEmbed.lib) window.tiktokEmbed.lib.render();
 }
 render();
 </script>
-<script async src="https://www.tiktok.com/embed.js"></script>
 </body>
 </html>
